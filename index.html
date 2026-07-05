@@ -501,23 +501,87 @@
     .cta-alt a { color: var(--cyan-dark); font-weight: 600; text-decoration: none; }
     .cta-alt a:hover { text-decoration: underline; }
 
-    @media (max-width: 860px) { .faq-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 560px) { .faq-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
-
-    /* ── RESPONSIVE ── */
+    /* ── RESPONSIVE TABLET ── */
     @media (max-width: 860px) {
+      section { padding: 60px 5%; }
       .steps { grid-template-columns: 1fr 1fr; }
       .steps::before { display: none; }
       .features-grid { grid-template-columns: 1fr 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
+      .faq-grid { grid-template-columns: 1fr 1fr; }
+      .caso-card { grid-template-columns: 1fr; padding: 28px 24px; gap: 28px; }
+      .caso-right { order: -1; }
+      .caso-card-alt .caso-right { order: -1; }
+      .caso-next { flex-direction: column; text-align: center; }
+      .step1-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 28px; }
+      .incluye-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .footer-top { gap: 2rem; }
     }
+
+    /* ── RESPONSIVE MÓVIL ── */
     @media (max-width: 600px) {
-      .features-grid { grid-template-columns: 1fr; }
+      /* Nav */
       .nav-links { display: none; }
-      .steps { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-stats { flex-direction: column; }
-      .stat { border-right: none; border-bottom: 1px solid var(--border); }
+      nav { padding: 0 5%; }
+
+      /* Hero */
+      .hero { padding: 56px 0 48px; }
+      .hero h1 { font-size: 1.9rem; }
+      .hero p { font-size: .95rem; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions a { width: 100%; text-align: center; }
+      .hero-stats { flex-direction: column; border-radius: var(--radius); }
+      .stat { border-right: none; border-bottom: 1px solid var(--border); padding: 1rem; }
       .stat:last-child { border-bottom: none; }
+
+      /* Social proof */
+      .social-proof { flex-direction: column; gap: .4rem; text-align: center; }
+      .sp-sep { display: none; }
+
+      /* Partners */
+      .partners { padding: 24px 5%; }
+
+      /* Antes/después */
+      .ad-grid { grid-template-columns: 1fr; }
+      .ad-arrow { transform: rotate(90deg); text-align: center; }
+
+      /* Proceso */
+      .steps { grid-template-columns: 1fr; gap: 1.6rem; }
+
+      /* Features */
+      .features-grid { grid-template-columns: 1fr; }
+
+      /* Integraciones */
+      .integrations-grid { gap: 8px; }
+
+      /* Casos */
+      .caso-card { padding: 24px 20px; gap: 24px; }
+      .caso-metrics { flex-direction: column; gap: .8rem; }
+      .caso-name { font-size: 1.8rem; }
+      .lawitec-stats { grid-template-columns: 1fr 1fr; }
+
+      /* Paso 1 */
+      .step1-card { padding: 24px 20px; }
+      .step1-title { font-size: 1.6rem; }
+      .step1-actions { flex-direction: column; align-items: flex-start; }
+
+      /* FAQ */
+      .faq-grid { grid-template-columns: 1fr; }
+
+      /* CTA */
+      .cta-section { padding: 60px 5%; }
+      .cta-section h2 { font-size: 1.6rem; }
+      .cta-btns { flex-direction: column; }
+      .cta-btns a { text-align: center; }
+      .cta-alt { flex-direction: column; text-align: center; }
+
+      /* Footer */
+      .footer-top { flex-direction: column; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: .4rem; text-align: center; }
+
+      /* General */
+      .section-title { font-size: 1.5rem; }
+      .btn-primary, .btn-ghost { padding: .8rem 1.2rem; font-size: .95rem; }
     }
   </style>
 </head>
